@@ -1,0 +1,27 @@
+INTERNMATE AI — FULL INTEGRATION PROTOTYPE
+
+1. Extract the ZIP.
+2. Backend terminal:
+   cd backend
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   python -m pip install -r requirements.txt
+   Copy-Item .env.example .env
+   notepad .env
+   # Set GEMINI_API_KEY to a NEW private key; save and close.
+   python -m uvicorn main:app --reload
+3. Frontend terminal (from project root):
+   cd frontend
+   npm install
+   npm run dev
+4. Open http://localhost:5173
+
+Demo HR: admin@internmate.demo / admin123
+Demo candidate: intern@internmate.demo / intern123
+
+Optional integrations:
+- Configure SMTP in backend/.env to send actual emails.
+- Configure Google Cloud OAuth and save client JSON as backend/credentials.json to create Calendar/Meet events.
+- Live evaluation captures microphone audio in the InternMate page; it does NOT automatically capture audio inside Google Meet.
+
+Full instructions and limitations are in README.md. Never share or commit API keys, credentials.json, or backend/.env.

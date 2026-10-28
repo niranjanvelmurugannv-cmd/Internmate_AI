@@ -1,0 +1,12 @@
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+backend/internmate.db
+backend/uploads/*
+backend/data/*
+backend/.env
+backend/credentials.json
+backend/.env.*
+!backend/.env.example
